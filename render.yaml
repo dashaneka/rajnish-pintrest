@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: rajnish-pinterest
+    runtime: docker
+    plan: free
+    autoDeployTrigger: commit
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+      - key: ALLOWED_USER_IDS
+        value: ""
+      - key: MAX_UPLOAD_MB
+        value: "49"
+      - key: MAX_TEMP_MB
+        value: "256"
+      - key: DOWNLOAD_TIMEOUT_SECONDS
+        value: "420"
